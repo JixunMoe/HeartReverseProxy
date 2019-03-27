@@ -1,0 +1,8 @@
+{
+  "name": "heart_reverse_proxy",
+  "version": "1.0.0",
+  "main": "heart_proxy.js",
+  "license": "MIT",
+  "author": "Jixun",
+  "homepage": "https://jixun.moe/heart-reverse-proxy"
+}
