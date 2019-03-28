@@ -102,7 +102,7 @@ http.createServer((req, res) => {
     })
     heart.pipe(res)
   }).end()
-}).listen(port, '127.0.0.1')
+}).listen(port, config.host)
 
 console.info('heart radio proxy ready; device id: %s, port %d', deviceId, port)
 
