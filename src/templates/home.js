@@ -13,7 +13,7 @@ function generateUrl(station, name, hasHd) {
   let html = `* <a href="/${station}" class="n">/${name}</a>`
 
   if (hasHd) {
-    html += ' [<a href="/${station}HD"> HD </a>]'
+    html += ` [<a href="/${station}HD"> HD </a>]`
   }
 
   return html

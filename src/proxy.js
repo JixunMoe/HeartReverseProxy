@@ -52,7 +52,14 @@ module.exports = (config) => {
     }, (heart) => {
       // Pass header over
       Object.keys(heart.headers).forEach(key => {
-        res.setHeader(key, heart.headers[key])
+        let value = heart.headers[key]
+
+        // Heart non-hd content-type error
+        if (value === 'audio/aacp') {
+          value = 'audio/aac'
+        }
+
+        res.setHeader(key, value)
       })
       heart.pipe(res)
     }).end()
