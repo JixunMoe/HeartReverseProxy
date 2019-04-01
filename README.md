@@ -17,4 +17,5 @@ Make a copy of `config.sample.json` and name it `config.json`, populate values.
 | `supersecretkey` | Go and [find it](https://play.google.com/store/apps/details?id=com.thisisglobal.player.heart). |
 | `host` | The host this app should listen to, use `127.0.0.1` if you are going to put this behind a local reverse proxy. |
 | `port` | The port this app should listen to. |
-
+| `handleStatic` | Handles request that would normally uses nginx to handle. |
+| `proxy` | `true` to stream content over the server, `false` to resolve url and redirect (via 302) |

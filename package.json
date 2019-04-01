@@ -1,8 +1,19 @@
 {
   "name": "heart_reverse_proxy",
   "version": "1.0.0",
-  "main": "heart_proxy.js",
+  "main": "src/heart_proxy.js",
   "license": "MIT",
   "author": "Jixun",
-  "homepage": "https://jixun.moe/heart-reverse-proxy"
+  "homepage": "https://jixun.moe/heart-reverse-proxy",
+  "scripts": {
+    "start": "node .",
+    "build": "node scripts/build.js",
+    "standard": "standard --fix src/**/*.js scripts/**/*.js"
+  },
+  "devDependencies": {
+    "standard": "12.0.1"
+  },
+  "peerDependencies": {
+    "serve-static": "1.13.2"
+  }
 }

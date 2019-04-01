@@ -6,7 +6,7 @@ const crypto = require('crypto')
  * @param {number} time           Time (in seconds) when the request is generated.
  * @param {string} superSecretKey A super secret key used to generate sign.
  */
-function signDevice(deviceId, time, superSecretKey) {
+function signDevice (deviceId, time, superSecretKey) {
   const hash = crypto.createHash('sha256')
   hash.update(`${deviceId}:${time}:${superSecretKey}`)
   return hash.digest('hex')
@@ -19,6 +19,6 @@ module.exports = (config) => {
     hdAuth: (deviceId, time) => {
       const key = signDevice(deviceId, time, config.supersecretkey)
       return `${deviceId}:${time}:${key}`
-    },
+    }
   }
 }
